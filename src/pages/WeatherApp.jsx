@@ -13,8 +13,19 @@ function WeatherApp() {
       return;
     }
 
-    const API = `http://api.weatherapi.com/v1/current.json?key=75a04acb1e944084910185206250903&q=${city}`;
+  
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY; // ✅ RIGHT for Vite
+  // const API_KEY = process.env.REACT_APP_WEATHER_API_KEY; // ✅ RIGHT for Create React App
+  // const API_KEY = process.env.WEATHER_API_KEY; // ❌ WRONG
 
+
+  if (!API_KEY) {
+    alert('API Key is missing!');
+    return;
+  }
+  
+  const API = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${encodeURIComponent(city)}`;
+  
     try {
       const response = await axios.get(API);
       console.log(response);
