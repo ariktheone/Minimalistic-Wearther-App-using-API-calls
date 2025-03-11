@@ -4,7 +4,7 @@ A sleek and responsive **React-based Weather Application** that fetches real-tim
 
 ## 🚀 Live Demo
 
-🌐 **Live URL**: [Click here to view the Weather App](https://your-vercel-deployment-url.vercel.app)  
+🌐 **Live URL**: [Click here to view the Weather App](https://minimalistic-wearther-app-using-api-calls.vercel.app/)  
 *(Replace this link with your actual Vercel deployed URL)*  
 
 ---
