@@ -1,0 +1,138 @@
+/* Main container */
+body{
+    background: linear-gradient(135deg, #6dd5fa, #2980b9);
+}
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6dd5fa, #2980b9);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Input field and button container */
+  .cityname {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Input field */
+  .cityname input {
+    flex: 1;
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button */
+  .cityname button {
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: none;
+    background: #ff4b1f;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cityname button:hover {
+    background: #ff9068;
+  }
+  
+  /* Weather card */
+  .weather-info {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* City name */
+  .weather-info h3 {
+    margin: 10px 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  
+  /* Country */
+  .weather-info p:nth-child(2) {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+  }
+  
+  /* Temperature styling */
+  .weather-info p:nth-child(3) {
+    font-size: 60px;
+    margin: 10px 0;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Generic paragraphs */
+  .weather-info p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #f1f1f1;
+  }
+  
+  /* Condition text */
+  .weather-info p:last-of-type {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 20px;
+  }
+  
+  /* Weather icon */
+  .weather-info img {
+    width: 100px;
+    margin: 10px 0;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Floating animation for icon */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .weather-info {
+      padding: 20px;
+    }
+  
+    .weather-info p:nth-child(3) {
+      font-size: 48px;
+    }
+  
+    .cityname {
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .cityname input, .cityname button {
+      width: 100%;
+    }
+  }
+  
